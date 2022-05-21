@@ -12,12 +12,12 @@ main ()
   cout << "### PLAYER 1 ###" << endl;
   for (ind = 0; ind <= 9; ind++)
     {
-      cout << "Digite o " << ind + 1 << "B: nC:mero: ";
+      cout << "Digite o " << ind + 1 << "º número: ";
       cin >> numeros[ind];
     }
 
   cout << "### PLAYER 2 ###" << endl;
-  cout << "Digite um nC:mero :";
+  cout << "Digite um número :";
   cin >> num;
   tentativas = 1;
   ind = 0;
