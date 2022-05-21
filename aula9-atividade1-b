@@ -1,0 +1,47 @@
+// Um dado é lançado 20 vezes e, a cada lançamento, 
+// a face sorteada é lançada em um vetor. 
+// Ao final dos sorteios, informe quantas vezes cada face ímpar foi sorteada.
+
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main () 
+{
+    setlocale (LC_ALL, "ptb");
+    
+    int ind, sorteios[20], face1=0, face3=0, face5=0;
+    
+    for (ind=0;ind<20;ind++) 
+    {
+        cout << "Digite a face sorteada na " << ind+1 << "º tentativa :";
+        cin >> sorteios[ind];
+    }
+    for (ind=0; ind<20; ind++)
+    {
+        switch (sorteios[ind])
+        {
+            case 1: face1++;
+            break;
+            case 3: face3++;
+            break;
+            case 5: face5++;
+            break;
+        }
+    }
+    
+    cout << "A face 1 foi sorteada " << face1 << " vezes." << endl;
+    cout << "A face 3 foi sorteada " << face3 << " vezes." << endl;
+    cout << "A face 5 foi sorteada " << face5 << " vezes." << endl;
+        
+    cout << "Relação de números sorteados: " << endl;
+    for (ind=0;ind<20;ind++)
+    {
+        cout << sorteios[ind] << endl;
+    }
+    
+    
+    system("pause");
+    return 0;
+}
