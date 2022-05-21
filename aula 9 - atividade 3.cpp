@@ -52,5 +52,6 @@ int main()
         acertos=0;
     }
     
-    
+    system("pause");
+    return 0;
 }
