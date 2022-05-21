@@ -19,38 +19,40 @@ main ()
   cout << "### PLAYER 2 ###" << endl;
   cout << "Digite um número :";
   cin >> num;
-  tentativas = 1;
-  ind = 0;
+  tentativas=1;
+  ind=0;
 
-  while (!achou && tentativas < 3)
+  while (achou == false and tentativas < 3)
     {
-      while (!achou && ind <= 9)
+      while (achou == false and ind <= 9)
 	{
 	  if (numeros[ind] == num)
 	    {
 	      achou = true;
+	      ind++;
 	    }
-	  ind++;
-	}
-      if (!achou)
-      {
-	tentativas
-	  ++;
-	cout << "Número não encontrado" << endl;
-	cout << "Tentativa nº: " << tentativas << ": ";
-	cin >> num;
-	ind = 0;
-      }
-      if (achou == true)
-	{
-	  cout << "Parabéns, você conseguiu depois de " << tentativas << " tentativas." << endl;
-	}
-      else
-	{
-	  cout << "Que pena, você não conseguiu." << endl;
-	}
+	  else
+	    {
+	      tentativas++;
+	      cout << "Número não encontrado" << endl;
+	      cout << "Tentativa nº: " << tentativas << ": " ;
+	      cin >> num;
+	      ind=0;
+	    }
+	    if (achou == true)
+	    {
+	      cout << "Parabéns, você conseguiu depois de " << tentativas << " tentativas." << endl;
+	    }
+	  else
+	    {
+	      cout << "Que pena, você não conseguiu." << endl;
+	    }
+	 	}
+	 	 
     }
 
-	system("pause");
-	return 0;
+
+
+
+  return 0;
 }
